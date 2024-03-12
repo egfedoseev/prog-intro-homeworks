@@ -3,7 +3,7 @@ package markup;
 import java.util.List;
 
 public class ListItem implements BBCode {
-    List<ParagraphAndMarkableList> list;
+    private final List<ParagraphAndMarkableList> list;
 
     protected String tagBBCodeOpen() {
         return "[*]";

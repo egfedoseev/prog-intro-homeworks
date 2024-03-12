@@ -6,7 +6,6 @@ import expression.TripleExpression;
 import expression.Variable;
 import expression.parser.CharSource;
 import expression.parser.StringSource;
-import expression.parser.TripleParser;
 
 import java.util.List;
 import java.util.Map;
@@ -121,9 +120,7 @@ public class ExpressionParser implements TripleParser {
 
     private AbstractExpression parseExpression(int minPriority) {
         skipWhitespace();
-        AbstractExpression expression = null;
-
-        expression = parseUnary();
+        AbstractExpression expression = parseUnary();
 
         boolean skipped = skipWhitespace();
 

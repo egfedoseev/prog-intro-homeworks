@@ -31,16 +31,6 @@ public class CircleBoard extends MNKBoard {
     }
 
     @Override
-    public Position getPosition() {
-        return super.getPosition();
-    }
-
-    @Override
-    public Cell getCell() {
-        return super.getCell();
-    }
-
-    @Override
     public Result makeMove(Move move) {
         return super.makeMove(move);
     }

@@ -3,7 +3,7 @@ package markup;
 import java.util.List;
 
 public abstract class MarkableList extends ParagraphAndMarkableList {
-    List<ListItem> list;
+    private final List<ListItem> list;
 
     protected abstract String tagBBCodeOpen();
 

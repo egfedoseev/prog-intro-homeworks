@@ -3,7 +3,7 @@ package markup;
 import java.util.List;
 
 public abstract class MarkupElement extends Element {
-    List<Element> list;
+    private final List<Element> list;
 
     public MarkupElement(List<Element> list) {
         this.list = List.copyOf(list);

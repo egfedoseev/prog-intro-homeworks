@@ -19,17 +19,17 @@ public abstract class BinaryOperation implements AbstractExpression {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append('(');
-        sb.append(first.toString());
-        sb.append(getSign());
-        sb.append(second.toString());
-        sb.append(')');
-        return sb.toString();
+        return '(' +
+                first.toString() +
+                getSign() +
+                second.toString() +
+                ')';
     }
 
     @Override
     public String toMiniString() {
+        assert first != null && second != null;
+
         StringBuilder sb = new StringBuilder();
 
         if (first.getPriority() >= getPriority()) {
@@ -46,7 +46,7 @@ public abstract class BinaryOperation implements AbstractExpression {
 
         sb.append(getSign());
 
-        if (getSign().equals(" * ") && second != null && second instanceof Divide) {
+        if (getSign().equals(" * ") && second instanceof Divide) {
             sb.append("(");
             sb.append(second.toMiniString());
             sb.append(")");

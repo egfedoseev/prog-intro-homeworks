@@ -1,7 +1,7 @@
 package expression.parser;
 
 import expression.*;
-import expression.exceptions.CheckedSubtract;
+import expression.exceptions.TripleParser;
 
 import java.util.Map;
 
@@ -87,9 +87,7 @@ public class ExpressionParser implements TripleParser {
 
     private AbstractExpression parseTripleExpression(int minPriority) {
         skipWhitespace();
-        AbstractExpression expression = null;
-
-        expression = parseUnary();
+        AbstractExpression expression = parseUnary();
 
         skipWhitespace();
 

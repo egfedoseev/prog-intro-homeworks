@@ -30,9 +30,7 @@ public class Text extends Element {
                 s.append("&gt;");
             } else if (st.charAt(i) == '&') {
                 s.append("&amp;");
-            } else if (st.charAt(i) == '\\' && i + 1 < st.length()) {
-                continue;
-            } else {
+            } else if (!(st.charAt(i) == '\\' && i + 1 < st.length())) {
                 s.append(st.charAt(i));
             }
         }

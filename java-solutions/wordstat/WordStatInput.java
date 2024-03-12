@@ -26,7 +26,7 @@ public class WordStatInput {
                         new InputStreamReader(
                                 new FileInputStream(args[0]), StandardCharsets.UTF_8
                         )
-                );
+                )
         ) {
             int ch = reader.read();
             while (ch >= 0) {
@@ -55,7 +55,7 @@ public class WordStatInput {
                 BufferedWriter writer = new BufferedWriter(
                         new OutputStreamWriter(
                                 new FileOutputStream(args[1]),
-                                "utf8"
+                                StandardCharsets.UTF_8
                         )
                 )
         ) {

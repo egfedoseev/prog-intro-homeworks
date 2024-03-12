@@ -1,8 +1,8 @@
 package wordstat;
 
 public class PairIntString implements Comparable<PairIntString> {
-    public int first;
-    public String second;
+    public final int first;
+    public final String second;
 
     public PairIntString(int first, String second) {
         this.first = first;

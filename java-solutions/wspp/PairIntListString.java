@@ -1,8 +1,8 @@
 package wspp;
 
 public class PairIntListString implements Comparable<PairIntListString> {
-    public IntList first;
-    public String second;
+    public final IntList first;
+    public final String second;
 
     PairIntListString(IntList first, String second) {
         this.first = first;

@@ -3,9 +3,9 @@ package game;
 import java.util.*;
 
 public class Tournament {
-    Player[] players;
+    private final Player[] players;
 
-    String board;
+    private final String board;
 
     private final int m;
 
@@ -72,7 +72,7 @@ public class Tournament {
             curPlace = playerIndexes.size() - playerIndexes.size() / 2 + 1;
         }
 
-        places[playerIndexes.get(0)] = 1;
+        places[playerIndexes.getFirst()] = 1;
         return places;
     }
 }

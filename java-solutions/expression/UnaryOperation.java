@@ -32,12 +32,10 @@ public abstract class UnaryOperation implements AbstractExpression {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getSign());
-        sb.append('(');
-        sb.append(expression.toString());
-        sb.append(')');
-        return sb.toString();
+        return getSign() +
+                '(' +
+                expression.toString() +
+                ')';
     }
 
     @Override

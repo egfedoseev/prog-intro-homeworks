@@ -3,7 +3,7 @@ package markup;
 import java.util.List;
 
 public class Paragraph extends ParagraphAndMarkableList implements Markdown, HTML {
-    List<Element> list;
+    private final List<Element> list;
 
     public Paragraph(List<Element> list) {
         this.list = List.copyOf(list);
